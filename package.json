@@ -1,0 +1,35 @@
+{
+  "name": "kodilla-task-10-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:html && npm run test:js",
+    "test:html": "glob-run nu-html-checker *.html",
+    "test:js": "node_modules/.bin/jshint js",
+    "build": "npm run build:clean && npm run build:sass && npm run build:autoprefixer && npm run test",
+    "build:clean": "rimraf css/*.css",
+    "build:sass": "sass --sourcemap=none --update sass:css",
+    "build:autoprefixer": "autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch": "parallelshell \"npm run watch:sass\" \"npm run watch:autoprefixer\" \"npm run watch:browsersync\" ",
+    "watch:sass": "sass --watch sass:css",
+    "watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch:browsersync": "node_modules/.bin/browser-sync start --server --files \"css/*.css\" \"*.html\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "glob-run": "^0.1.6",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.18.13",
+    "jshint": "^2.9.5",
+    "nu-html-checker": "^0.1.0"
+  }
+}
