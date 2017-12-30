@@ -15,6 +15,36 @@ body {
 	position: relative;
 }
 
+#scroll-icon {
+    margin-top: 180px;
+    width: 23px;
+}
+
+.scroll-icon {
+    fill: #fff;
+}
+
+@keyframes scroll-animation {
+    0% { 
+        opacity: 1;
+    }
+    50% { 
+        trasnform: translateY(-16px);
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(16px);
+        opacity: 0;
+    }
+}
+
+.scroll-circle {
+    animation: scroll-animation 2s ease-out infinite;
+}
+
 .header {
     width: 100%;
 	min-height: 100vh;
@@ -50,9 +80,6 @@ body {
         line-height: 39px;
         letter-spacing: 1px;
         font-weight: 400;
-    }
-    .scroll {
-        margin-top: 180px;
     }
 }
 
@@ -153,6 +180,9 @@ body {
         }
         img {
             margin-bottom: 24px;
+            transition: .8s;
+            width: 80px;
+            height: auto;
         }
         h4 {
             font-size: 20px;
@@ -168,6 +198,10 @@ body {
             padding: 0 60px;
         }
     }
+}
+
+.icons:hover img {
+    transform: scale(1.1);
 }
 
 .buttons-container {
@@ -268,6 +302,7 @@ footer {
         h3 {
             padding: 0 30px;
             width: auto;
+            letter-spacing: 0;
         }
     }
 
@@ -309,5 +344,9 @@ footer {
         .service-5 {
             margin: 6px 0 0;
         }
+    }
+
+    .btn-themed {
+        padding: 15px 30px;
     }
 }

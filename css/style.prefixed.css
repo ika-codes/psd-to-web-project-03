@@ -7,6 +7,42 @@
 body {
   position: relative; }
 
+#scroll-icon {
+  margin-top: 180px;
+  width: 23px; }
+
+.scroll-icon {
+  fill: #fff; }
+
+@-webkit-keyframes scroll-animation {
+  0% {
+    opacity: 1; }
+  50% {
+    trasnform: translateY(-16px);
+    opacity: 1; }
+  75% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    opacity: 0; } }
+
+@keyframes scroll-animation {
+  0% {
+    opacity: 1; }
+  50% {
+    trasnform: translateY(-16px);
+    opacity: 1; }
+  75% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    opacity: 0; } }
+.scroll-circle {
+  -webkit-animation: scroll-animation 2s ease-out infinite;
+          animation: scroll-animation 2s ease-out infinite; }
+
 .header {
   width: 100%;
   min-height: 100vh;
@@ -48,8 +84,6 @@ body {
     line-height: 39px;
     letter-spacing: 1px;
     font-weight: 400; }
-  .header .scroll {
-    margin-top: 180px; }
 
 .boxed {
   border: 2px #3c3c3c solid;
@@ -153,7 +187,10 @@ body {
   .what-we-do .icons:last-child {
     margin-bottom: 40px; }
   .what-we-do .icons img {
-    margin-bottom: 24px; }
+    margin-bottom: 24px;
+    transition: .8s;
+    width: 80px;
+    height: auto; }
   .what-we-do .icons h4 {
     font-size: 20px;
     font-weight: 700;
@@ -165,6 +202,10 @@ body {
     font-weight: 300;
     line-height: 24px;
     padding: 0 60px; }
+
+.icons:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1); }
 
 .buttons-container {
   display: -webkit-box;
@@ -252,7 +293,8 @@ footer {
     padding: 0 20px 30px; }
     .boxed h3 {
       padding: 0 30px;
-      width: auto; }
+      width: auto;
+      letter-spacing: 0; }
 
   .services .bg-box {
     margin: 120px 20px;
@@ -284,6 +326,9 @@ footer {
     .buttons-container .service-2 {
       margin: 6px 0 0; }
     .buttons-container .service-5 {
-      margin: 6px 0 0; } }
+      margin: 6px 0 0; }
+
+  .btn-themed {
+    padding: 15px 30px; } }
 
 /*# sourceMappingURL=style.prefixed.css.map */
