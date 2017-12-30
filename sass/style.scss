@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext');
+
+$font: 'Lato', sans-serif;
+$text-dark: #3c3c3c;
+$text-light: #fff;
+$bg-color: #aab5ca;
+
+* {
+	box-sizing: border-box;
+    font-family: $font;
+    color: $text-dark;
+}
+
+body {
+	position: relative;
+}
+
+.header {
+    width: 100%;
+	min-height: 100vh;
+	background-color: $bg-color;
+	background-image: url("../img/hero-scene.jpg");
+	background-size: cover;
+    background-position: center;
+    .items-column {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .logo {
+        width: 65px;
+        height: auto;
+        margin-bottom: 94px;
+    }
+    h1 {
+        color: $text-light;
+        text-transform: uppercase;
+        font-size: 54px;
+        line-height: 80px;
+        margin-bottom: 26px;
+        letter-spacing: 3px;
+        font-weight: 700;
+    }
+    p {
+        color: $text-light;
+        font-size: 15px;
+        line-height: 39px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .scroll {
+        margin-top: 180px;
+    }
+}
+
+.boxed {
+    border: 2px $text-dark solid;
+    max-width: 900px;
+    margin: 120px 20px;
+    padding: 0 60px 30px;
+    h3 {
+        font-size: 34px;
+        text-transform: uppercase;
+        display: inline-block;
+        background-color: $text-light;
+        width: 420px;
+        font-weight: 700;
+        transform: translateY(-40px);
+        letter-spacing: 2px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300px;
+    }
+}
+
+.about {
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.services {
+    width: 100%;
+	background-color: $bg-color;
+	background-image: url("../img/services.jpg");
+	background-size: cover;
+    background-position: center;
+    text-align: center;
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .bg-box {
+        margin: 120px 20px;
+        max-width: 900px;
+        border-left: 2px $text-light solid;
+        border-right: 2px $text-light solid;
+        border-bottom: 2px $text-light solid;
+    }
+    h3 {
+        font-size: 34px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        max-width: 900px;
+        font-weight: 700;
+        transform: translateY(-18px);
+        display: flex;
+        align-items: center;
+        color: $text-light;
+        letter-spacing: 2px;
+        &::before {
+            content: '';
+            display: block;
+            flex: 1;
+            margin: 0 115px 0 0;
+            border: 1px $text-light solid;
+        }
+        &::after {
+            content: '';
+            display: block;
+            flex: 1;
+            margin: 0 0 0 115px;
+            border: 1px $text-light solid;
+        }
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300px;
+        padding: 30px 60px;
+        color: $text-light;
+    }
+}
+
+.what-we-do {
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .icons {
+        margin-top: 70px;
+        &:last-child {
+            margin-bottom: 40px;
+        }
+        img {
+            margin-bottom: 24px;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            padding: 0 60px;
+        }
+    }
+}
+
+.buttons-container {
+    display: flex;
+    margin-top: 6px;
+    .service {
+        flex: 1;
+        height: 235px;
+        background-size: cover;
+        background-position: center;
+        transition: 1s;
+        position: relative;
+        &:hover {
+            flex: 2;
+        }
+        h4 {
+            color: $text-light;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 0 0 10px 20px;
+            letter-spacing: 3px;
+            font-size: 34px;
+            position: absolute;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .service-1 {
+        background-image: url("../img/services-1.jpg");
+    }
+    .service-2 {
+        background-image: url("../img/services-3.jpg");
+        margin: 0 6px;
+    }
+    .service-3 {
+        background-image: url("../img/services-2.jpg");
+    }
+    .service-4 {
+        background-image: url("../img/services-4.jpg");
+    }
+    .service-5 {
+        background-image: url("../img/services-5.jpg");
+        margin: 0 6px;
+    }
+    .service-6 {
+        background-image: url("../img/services-6.jpg");
+    }
+}
+
+.contact {
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.btn-themed {
+    display: inline-block;
+    margin: 20px 0;
+    border: none;
+    border-radius: 0;
+    background-color: $text-dark;
+    padding: 15px 100px;
+    color: $text-light;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: .5s;
+    &:hover {
+        background-color: $bg-color;
+    }
+    
+}
+
+
+footer {
+    text-align: center;
+    margin-bottom: 10px;
+    p {
+     display: inline-block;
+    }
+    img {
+        display: inline-block;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .boxed {
+        margin: 120px 20px;
+        padding: 0 20px 30px;
+        h3 {
+            padding: 0 30px;
+            width: auto;
+        }
+    }
+
+    .services {
+        .bg-box {
+            margin: 120px 20px;
+            max-width: 900px;
+        }
+        h3 {
+            &::before {
+                margin: 0 30px 0 0;
+            }
+            &::after {
+                margin: 0 0 0 30px;
+            }
+        }
+        p {
+            font-size: 16px;
+            font-weight: 300px;
+            padding: 30px 20px;
+            color: $text-light;
+        }
+    }
+
+    .what-we-do .icons p {
+        padding: 0 20px;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        .service {
+            margin: 6px 0 0;
+        }
+        .service-2 {
+            margin: 6px 0 0;
+        }
+        .service-5 {
+            margin: 6px 0 0;
+        }
+    }
+}
